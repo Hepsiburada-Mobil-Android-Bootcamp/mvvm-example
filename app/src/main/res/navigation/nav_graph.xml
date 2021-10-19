@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.synthesizer.source.empty.ui.main.MainFragment"
+        android:label="MainFragment">
+        <action
+            android:id="@+id/showDetail"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.synthesizer.source.empty.ui.detail.DetailFragment"
+        android:label="DetailFragment">
+        <argument
+            android:name="charId"
+            android:defaultValue="1"
+            app:argType="integer"
+            app:nullable="false" />
+    </fragment>
+</navigation>
